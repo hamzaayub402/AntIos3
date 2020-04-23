@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,8 +13,27 @@
 		F17AF31F2451B58E00792D2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17AF31D2451B58E00792D2E /* Main.storyboard */; };
 		F17AF3212451B59000792D2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F17AF3202451B59000792D2E /* Assets.xcassets */; };
 		F17AF3242451B59000792D2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17AF3222451B59000792D2E /* LaunchScreen.storyboard */; };
+		F17AF32C2451BACC00792D2E /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17AF32B2451BACC00792D2E /* WebRTC.framework */; };
+		F17AF32D2451BACC00792D2E /* WebRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F17AF32B2451BACC00792D2E /* WebRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F17AF3332451BB2200792D2E /* AntMediaSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F17AF3312451BB2200792D2E /* AntMediaSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F17AF3352451BB2E00792D2E /* AntMediaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17AF3342451BB2E00792D2E /* AntMediaSDK.framework */; };
 		F48D35C928F9C7E91251464C /* Pods_AntIos3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C705FFE790BCE9561360E3D /* Pods_AntIos3.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F17AF32E2451BACC00792D2E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F17AF3332451BB2200792D2E /* AntMediaSDK.framework in Embed Frameworks */,
+				F17AF32D2451BACC00792D2E /* WebRTC.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4C705FFE790BCE9561360E3D /* Pods_AntIos3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntIos3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,6 +47,10 @@
 		F17AF3202451B59000792D2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F17AF3232451B59000792D2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F17AF3252451B59000792D2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F17AF32B2451BACC00792D2E /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebRTC.framework; path = ../../../../Downloads/WebRTCiOSSDK/WebRTC.framework; sourceTree = "<group>"; };
+		F17AF32F2451BADD00792D2E /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebRTC.framework; sourceTree = "<group>"; };
+		F17AF3312451BB2200792D2E /* AntMediaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AntMediaSDK.framework; path = ../../../../Desktop/AntMediaSDK.framework; sourceTree = "<group>"; };
+		F17AF3342451BB2E00792D2E /* AntMediaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AntMediaSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F17AF3352451BB2E00792D2E /* AntMediaSDK.framework in Frameworks */,
 				F48D35C928F9C7E91251464C /* Pods_AntIos3.framework in Frameworks */,
+				F17AF32C2451BACC00792D2E /* WebRTC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +70,8 @@
 		991C0A2F659524A571443DA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F17AF3312451BB2200792D2E /* AntMediaSDK.framework */,
+				F17AF32B2451BACC00792D2E /* WebRTC.framework */,
 				4C705FFE790BCE9561360E3D /* Pods_AntIos3.framework */,
 			);
 			name = Frameworks;
@@ -53,6 +80,8 @@
 		F17AF30B2451B58E00792D2E = {
 			isa = PBXGroup;
 			children = (
+				F17AF3342451BB2E00792D2E /* AntMediaSDK.framework */,
+				F17AF32F2451BADD00792D2E /* WebRTC.framework */,
 				F17AF3162451B58E00792D2E /* AntIos3 */,
 				F17AF3152451B58E00792D2E /* Products */,
 				FE42FC05612AA4FE6550E284 /* Pods */,
@@ -88,7 +117,6 @@
 				CA436A01108BA9EE35FF104A /* Pods-AntIos3.debug.xcconfig */,
 				D2246111198BA4AA6F20D01C /* Pods-AntIos3.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -104,6 +132,7 @@
 				F17AF3112451B58E00792D2E /* Frameworks */,
 				F17AF3122451B58E00792D2E /* Resources */,
 				D71D700F61EC09FB7C479284 /* [CP] Embed Pods Frameworks */,
+				F17AF32E2451BACC00792D2E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -356,6 +385,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66NH7KL36W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = AntIos3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -375,6 +408,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66NH7KL36W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = AntIos3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
