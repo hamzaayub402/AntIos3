@@ -13,9 +13,13 @@
 		F17AF31F2451B58E00792D2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17AF31D2451B58E00792D2E /* Main.storyboard */; };
 		F17AF3212451B59000792D2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F17AF3202451B59000792D2E /* Assets.xcassets */; };
 		F17AF3242451B59000792D2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17AF3222451B59000792D2E /* LaunchScreen.storyboard */; };
+		F48D35C928F9C7E91251464C /* Pods_AntIos3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C705FFE790BCE9561360E3D /* Pods_AntIos3.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C705FFE790BCE9561360E3D /* Pods_AntIos3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntIos3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA436A01108BA9EE35FF104A /* Pods-AntIos3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntIos3.debug.xcconfig"; path = "Target Support Files/Pods-AntIos3/Pods-AntIos3.debug.xcconfig"; sourceTree = "<group>"; };
+		D2246111198BA4AA6F20D01C /* Pods-AntIos3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntIos3.release.xcconfig"; path = "Target Support Files/Pods-AntIos3/Pods-AntIos3.release.xcconfig"; sourceTree = "<group>"; };
 		F17AF3142451B58E00792D2E /* AntIos3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AntIos3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F17AF3172451B58E00792D2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F17AF3192451B58E00792D2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48D35C928F9C7E91251464C /* Pods_AntIos3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		991C0A2F659524A571443DA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C705FFE790BCE9561360E3D /* Pods_AntIos3.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F17AF30B2451B58E00792D2E = {
 			isa = PBXGroup;
 			children = (
 				F17AF3162451B58E00792D2E /* AntIos3 */,
 				F17AF3152451B58E00792D2E /* Products */,
+				FE42FC05612AA4FE6550E284 /* Pods */,
+				991C0A2F659524A571443DA9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = AntIos3;
 			sourceTree = "<group>";
 		};
+		FE42FC05612AA4FE6550E284 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA436A01108BA9EE35FF104A /* Pods-AntIos3.debug.xcconfig */,
+				D2246111198BA4AA6F20D01C /* Pods-AntIos3.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F17AF3282451B59000792D2E /* Build configuration list for PBXNativeTarget "AntIos3" */;
 			buildPhases = (
+				0A67291073AF9785F683F999 /* [CP] Check Pods Manifest.lock */,
 				F17AF3102451B58E00792D2E /* Sources */,
 				F17AF3112451B58E00792D2E /* Frameworks */,
 				F17AF3122451B58E00792D2E /* Resources */,
+				D71D700F61EC09FB7C479284 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A67291073AF9785F683F999 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AntIos3-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D71D700F61EC09FB7C479284 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AntIos3/Pods-AntIos3-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AntIos3/Pods-AntIos3-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AntIos3/Pods-AntIos3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F17AF3102451B58E00792D2E /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		F17AF3292451B59000792D2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA436A01108BA9EE35FF104A /* Pods-AntIos3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		F17AF32A2451B59000792D2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2246111198BA4AA6F20D01C /* Pods-AntIos3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

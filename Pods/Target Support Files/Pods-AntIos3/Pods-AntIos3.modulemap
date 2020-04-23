@@ -1,0 +1,6 @@
+framework module Pods_AntIos3 {
+  umbrella header "Pods-AntIos3-umbrella.h"
+
+  export *
+  module * { export * }
+}
