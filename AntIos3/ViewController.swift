@@ -12,8 +12,12 @@ import AntMediaSDK
 class ViewController: UIViewController {
 
     @IBOutlet weak var fullVideoView: UIView!
+    @IBOutlet weak var broadcastCounter: UILabel!
+    @IBOutlet weak var bottomLiveBroadcastView: UIView!
     
     let client: AntMediaClient = AntMediaClient.init()
+    var time = 0
+    var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +26,7 @@ class ViewController: UIViewController {
         override func viewWillAppear(_ animated: Bool) {
             print("viewWillAppear")
             super.viewWillAppear(animated)
+            startTimer()
             self.client.delegate = self
             self.client.setDebug(true)
             self.client.setOptions(url: "ws://34.255.219.25:5080/WebRTCAppEE/websocket", streamId: "ios1", token: "", mode: AntMediaClientMode.publish)
@@ -30,8 +35,23 @@ class ViewController: UIViewController {
             self.client.setTargetResolution(width: 480, height: 360)
             self.client.setLocalView(container: fullVideoView)
     //        self.client.startInternal()
-            self.client.start()
+//            self.client.start()
         }
+    
+    func startTimer(){
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.action), userInfo: nil, repeats: true)
+    }
+    
+    @objc func action () {
+        time += 1
+        broadcastCounter.text = String(time)
+        
+        if (bottomLiveBroadcastView.isHidden){
+            bottomLiveBroadcastView.isHidden = false
+        } else {
+            bottomLiveBroadcastView.isHidden = true
+        }
+    }
 
 }
 

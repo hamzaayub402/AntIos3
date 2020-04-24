@@ -69,6 +69,12 @@
                                     <constraint firstAttribute="width" constant="90" id="Vj9-Lh-xI6"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtH-RU-wVt">
+                                <rect key="frame" x="187" y="136" width="40.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -81,14 +87,18 @@
                             <constraint firstAttribute="trailing" secondItem="sQ8-c9-xVI" secondAttribute="trailing" id="VvQ-oM-BJc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gsN-i3-adA" secondAttribute="trailing" constant="20" id="YOT-ad-Mrz"/>
                             <constraint firstItem="sQ8-c9-xVI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bfn-tp-PJX"/>
+                            <constraint firstItem="CtH-RU-wVt" firstAttribute="top" secondItem="RCv-OF-H44" secondAttribute="bottom" constant="71" id="c9S-cA-TIL"/>
                             <constraint firstItem="MrH-pd-jfB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e0p-Nh-gWG"/>
                             <constraint firstAttribute="trailing" secondItem="RCv-OF-H44" secondAttribute="trailing" id="fMH-EN-WQ0"/>
                             <constraint firstItem="MrH-pd-jfB" firstAttribute="top" secondItem="RCv-OF-H44" secondAttribute="bottom" constant="50" id="fwd-OD-JQh"/>
                             <constraint firstItem="LNC-42-FyY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gx5-OI-V6W"/>
+                            <constraint firstItem="CtH-RU-wVt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rqn-uO-eoA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bottomLiveBroadcastView" destination="LNC-42-FyY" id="NQn-Y1-J7v"/>
+                        <outlet property="broadcastCounter" destination="CtH-RU-wVt" id="Xxn-Cq-s5W"/>
                         <outlet property="fullVideoView" destination="sQ8-c9-xVI" id="phk-AX-sWr"/>
                     </connections>
                 </viewController>
