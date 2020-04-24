@@ -44,7 +44,23 @@ class ViewController: UIViewController {
     
     @objc func action () {
         time += 1
-        broadcastCounter.text = String(time)
+        var sec = 0;
+        var mint = 0;
+        var hour = 0;
+        var totalTime = "";
+        sec = time % 60;
+        var strSeconds = String(sec)
+        if (sec < 10) {
+          strSeconds = "0\(strSeconds)";
+        }
+        mint = (time / 60) % 60;
+        var strMint = String(mint)
+        if (mint < 10) {
+          strMint = "0\(strMint)"
+        }
+        hour = (time / 3600);
+        totalTime = "\(hour):\(strMint):\(strSeconds)";
+        broadcastCounter.text = totalTime
         
         if (bottomLiveBroadcastView.isHidden){
             bottomLiveBroadcastView.isHidden = false
