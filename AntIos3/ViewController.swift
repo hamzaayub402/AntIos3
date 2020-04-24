@@ -52,6 +52,18 @@ class ViewController: UIViewController {
             bottomLiveBroadcastView.isHidden = true
         }
     }
+    
+    @IBAction func btnStopBroadcast(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Stop Broadcast!", message: "Are you sure you want to stop this broadcast?", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {action in
+            self.client.stop()
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+
+        self.present(alert, animated: true)
+    }
+    
 
 }
 
