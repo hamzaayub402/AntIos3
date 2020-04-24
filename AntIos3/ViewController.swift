@@ -64,7 +64,13 @@ class ViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
-
+    @IBAction func btnSwitchCamera(_ sender: UIButton) {
+        print("Switch camera clickedd.")
+    }
+    
+    @IBAction func btnFlashLight(_ sender: UIButton) {
+        print("Flash light here...")
+    }
 }
 
 extension ViewController: AntMediaClientDelegate {
