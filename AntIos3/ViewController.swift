@@ -31,7 +31,7 @@ class ViewController: UIViewController {
             self.client.setDebug(true)
             self.client.setOptions(url: "ws://34.255.219.25:5080/WebRTCAppEE/websocket", streamId: "ios1", token: "", mode: AntMediaClientMode.publish)
             self.client.setCameraPosition(position: .back)
-            self.client.setScaleMode(mode: .scaleAspectFit)
+            self.client.setScaleMode(mode: .scaleAspectFill)
             self.client.setTargetResolution(width: 480, height: 360)
             self.client.setLocalView(container: fullVideoView)
     //        self.client.startInternal()
