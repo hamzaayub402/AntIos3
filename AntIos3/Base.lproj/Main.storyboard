@@ -78,18 +78,27 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LNC-42-FyY">
                                 <rect key="frame" x="20" y="692" width="160" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are Live now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niG-8I-s04">
-                                        <rect key="frame" x="16" y="16" width="128.5" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU ARE LIVE NOW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niG-8I-s04">
+                                        <rect key="frame" x="4" y="16" width="146.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player_record" translatesAutoresizingMaskIntoConstraints="NO" id="gN2-7R-04B">
+                                        <rect key="frame" x="4" y="40.5" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="dOe-2i-Cfk"/>
+                                            <constraint firstAttribute="width" constant="30" id="mVy-m1-pTo"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.98209856250160643" green="0.98657392187620485" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="FN1-0M-B8n"/>
-                                    <constraint firstItem="niG-8I-s04" firstAttribute="top" secondItem="LNC-42-FyY" secondAttribute="top" constant="16" id="ice-5q-8cn"/>
-                                    <constraint firstItem="niG-8I-s04" firstAttribute="leading" secondItem="LNC-42-FyY" secondAttribute="leading" constant="16" id="x0e-2M-yS7"/>
+                                    <constraint firstItem="niG-8I-s04" firstAttribute="top" secondItem="LNC-42-FyY" secondAttribute="top" constant="16" id="JkC-TO-Hjr"/>
+                                    <constraint firstItem="niG-8I-s04" firstAttribute="leading" secondItem="LNC-42-FyY" secondAttribute="leading" constant="4" id="RDS-5I-AVg"/>
+                                    <constraint firstItem="gN2-7R-04B" firstAttribute="leading" secondItem="LNC-42-FyY" secondAttribute="leading" constant="4" id="qyC-KX-W5I"/>
+                                    <constraint firstItem="gN2-7R-04B" firstAttribute="top" secondItem="niG-8I-s04" secondAttribute="bottom" constant="5" id="w3Q-4S-deK"/>
                                     <constraint firstAttribute="height" constant="100" id="zgg-sV-npo"/>
                                 </constraints>
                             </view>
@@ -164,6 +173,7 @@
         <image name="flash_on" width="18" height="18"/>
         <image name="gallery" width="12" height="12"/>
         <image name="location" width="12" height="12"/>
+        <image name="player_record" width="42.5" height="42.5"/>
         <image name="record_red" width="12" height="12"/>
     </resources>
 </document>
